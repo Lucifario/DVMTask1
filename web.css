@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --color-primary: #4A6572;
+    --color-secondary: #F9AA33; 
+    --color-light: #FFFFFF; 
+    --color-dark: #232F34; 
+    --color-grey: #B0BEC5; 
+    --color-border: #B0BEC5;
+    --color-border-hover: #F9AA33;
+    --color-box-shadow: rgba(0, 0, 0, 0.1);
+    --color-primary-hover: #5E8396; 
+    --color-secondary-hover: #FFB04C;
+    --box-shadow: 0px 4px 6px var(--color-box-shadow);
+    --box-shadow-hover: 0px 6px 8px var(--color-box-shadow); 
+}
+
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    font-optical-sizing: auto;
+    text-decoration: none; text-transform: capitalize;
+    transition: all.2s linear;
+    transition: width none;
+    font-weight: 400; /* Example: 400 is normal weight */
+    font-style: normal;
+}
+
+html{
+    font-size: 100%;
+    overflow-x: hidden;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+html ::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #4A6572;
+}
+
+.header{
+    background: var(--color-dark);
+    padding: 1.5rem 0; /* Maintain padding top and bottom, remove horizontal padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-1 {
+    background: var(--color-primary);
+    padding: 1.5rem 0; /* Maintain padding top and bottom, remove horizontal padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Make both headers take the full width of the viewport */
+}
+
+.header .logo, .header-1 .logo {
+    margin-left: 2%;
+    font-size: 2.5rem;
+    font-weight: bolder; /* Add left margin for spacing */
+}
+
+.header-1 .search-form {
+    flex: 1; /* Allow the search form to take up remaining space */
+    display: flex;
+    justify-content: center;
+    width: 40rem;
+    height: 3rem;
+    border: var(--color-border);
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border-radius: 0.5rem; /* Center the search form */
+}
+
+.header-1 .icons {
+    margin-right: 2%; /* Add right margin for spacing */
+}
+
+/* Increase spacing between icons specifically */
+.header-1 .icons a,
+.header-1 .icons div {
+    margin: 0 10px; /* Adjust spacing around icons */
+    display: inline-block; /* Ensure icons are displayed in a row */
+}
+
+.header-1 .search-form {
+    font-size: 1.6rem;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
+    text-transform: none;
+    color: var(--color-dark);
+}
+
+.header .header-1 .icons div, .header .header-1 .icons a{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: var(--color-dark);
+    cursor: pointer;
+    
+}
+
+.header .header-1 .icons div:hover, .header .header-1 .icons a:hover {
+    color: var(--color-secondary-hover);
+}
+
+
+#search-btn{
+    display: none;
+}
+
+.header-2 {
+    background: var(--color-primary-hover);
+    text-align: center;
+    padding: 0.00000001rem 0; /* Adjust top and bottom padding as needed */
+    width: 100%; /* Adjust width as needed */
+    margin: auto; /* Center horizontally */
+}
+
+
+.header-2 .navbar {
+    padding: 1rem; /* Add padding to separate from header */
+    text-align: center;
+    width: auto;
+    margin: auto;
+}
+
+.header-2 .navbar a {
+    color: #FFFFFF;
+    display: inline-block; /* Display links as inline-block elements */
+    padding: 1.2rem; /* Add padding for better spacing */
+    font-size: 1.5rem;
+    text-decoration: none; /* Remove underline */
+}
+
+.header-2 .navbar a:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+.header-2.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+@media (max-width:991px) {
+    html{
+        font-size: 62.5%;
+    }
+    .header .header-1{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:450px) {
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width:768px) {
+    .header .header-2{
+        display: none;
+    }
+}
+.content h1{
+    text-align: center;
+}
